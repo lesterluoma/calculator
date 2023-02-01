@@ -42,7 +42,7 @@ class Calculator {
         case '-':
           computation = prev - current
           break
-        case '*':
+        case 'x':
           computation = prev * current
           break
         case '÷':
@@ -74,11 +74,9 @@ class Calculator {
     }
   
     updateDisplay() {
-      this.currentOperandTextElement.innerText =
-        this.getDisplayNumber(this.currentOperand)
+      this.currentOperandTextElement.innerText = this.getDisplayNumber(this.currentOperand)
       if (this.operation != null) {
-        this.previousOperandTextElement.innerText =
-          `${this.getDisplayNumber(this.previousOperand)} ${this.operation}`
+        this.previousOperandTextElement.innerText = `${this.getDisplayNumber(this.previousOperand)} ${this.operation}`
       } else {
         this.previousOperandTextElement.innerText = ''
       }
